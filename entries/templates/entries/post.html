@@ -1,0 +1,41 @@
+{% extends "entries/base.html" %} {% load static %} {% block page_header %}
+<!-- Page Header -->
+<header
+  class="masthead"
+  style="background-image: url('static/entries/img/post-bg.jpg')"
+>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Clean Blog</h1>
+          <span class="subheading">A Blog Theme by Start Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %} {% block content %}
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="post-preview">
+        <h2 class="post-title">
+          {{object.entry_title}}
+        </h2>
+        <h3 class="post-text">
+          {{object.enrty_text}}
+        </h3>
+        <p class="post-meta">
+          Posted by {{object.entry_author}} on {{object.entry_published_date}}
+        </p>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>
+
+<hr />
+{% endblock %}
